@@ -92,8 +92,8 @@ cleanedDF = cleanedDF.groupby(['year', 'genre']).sum().reset_index()
 print(cleanedDF)
 fig6 = px.line(cleanedDF, x="year", y="gross", color='genre')
 fig6.show()
-#Answer: Revenue of each Genre fluctuates from 1980 to 2019, with Action generates highest revenue most of the years, 
-# followed by Animation and Comedy. 
+#Answer: Revenue of each Genre fluctuates from 1980 to 2019, with Action generates highest revenue 
+#most of the years, followed by Animation and Comedy. 
 
 #Ques_3: How many movies produced in each kind of genres?
 countGE = cleanedDF.groupby('genre')['year'].count().reset_index()
